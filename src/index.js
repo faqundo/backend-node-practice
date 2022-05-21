@@ -1,23 +1,28 @@
 // ************ Require's ************
 require('dotenv').config();
+const createError = require('http-errors');
 const express = require('express');
 const logger = require('morgan');
+
 const schedule = require('./routes/schedule');
 const login = require('./routes/login');
-const { initializeApp } = require('firebase-admin/app');
+//const { initializeApp } = require('firebase-admin/app');
 
 // ************ express() - (don't touch) ************
 const app = express();
 
 
 // Settings
-initializeApp();
+//initializeApp();
 app.set('port', process.env.PORT || 3000);
 
 // ************ Middlewares - (don't touch) ************
 app.use(express.urlencoded({ extended: false }));
 app.use(logger('dev'));
 app.use(express.json());
+
+
+
 
 // Routes
 app.get('/',(req,res)=>{
@@ -32,4 +37,6 @@ app.use('/api', schedule);
 app.listen(app.get('port'), () => {
   console.log(`Server on port ${app.get('port')}`);
 });
+
+
 
