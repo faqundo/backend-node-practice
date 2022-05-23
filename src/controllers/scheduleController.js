@@ -23,7 +23,7 @@ const controller = {
         
       });
     
-      payload["courses"] = orderedCourses;
+      payload["courses"] = orderedCourses[0];
       console.log(payload);
     
       res.json(payload);
