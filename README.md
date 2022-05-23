@@ -4,7 +4,7 @@
 $ npm install
 ```
 
-## Running the app
+# Running the app
 
 copy .env.example and create .env
 ```bash
@@ -18,7 +18,7 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+# Test
 
 ```bash
 # tests
@@ -27,6 +27,10 @@ $ npm run test:watch
 
 ```
 
-## Docker Database
+# Docker Database
 
 docker-compose -f docker-compose-mysql-only.yml up
+
+# Endpoint
+
+POST localhost:3000/api/schedule 
