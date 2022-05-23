@@ -27,10 +27,12 @@ app.use('/auth', login);
 app.use('/api',schedule);
 
 
+
+
 // Starting the server
-app.listen(app.get('port'), () => {
+/* app.listen(app.get('port'), () => {
   console.log(`Server on port ${app.get('port')}`);
-});
+}); */
 
-
+module.exports = app
 

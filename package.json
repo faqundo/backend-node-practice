@@ -5,8 +5,10 @@
   "author": "faqundo",
   "scripts": {
     "dev": "nodemon src",
-    "debug": "nodemon --inspect src/index.js",
-    "start": "nodemon ./src/index.js"
+    "debug": "nodemon --inspect src/app.js",
+    "start": "nodemon ./src/app.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "main": "index.js",
   "dependencies": {
@@ -20,5 +22,10 @@
     "morgan": "^1.10.0",
     "mysql": "^2.15.0",
     "nodemon": "^2.0.16"
+  },
+  "devDependencies": {
+    "jest": "^28.1.0",
+    "request": "^2.88.2",
+    "supertest": "^6.2.3"
   }
 }
